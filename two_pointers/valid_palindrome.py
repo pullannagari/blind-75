@@ -1,17 +1,17 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         # not using extra memory
-        l = 0
-        h = len(s)-1
-        while l < h:
-            while l < h and not self.is_alpha_num(s[l]):
-                l += 1
-            while l < h and not self.is_alpha_num(s[h]):
-                h -= 1
-            if s[l].lower() != s[h].lower():
+        low = 0
+        high = len(s)-1
+        while low < high:
+            while low < high and not self.is_alpha_num(s[low]):
+                low += 1
+            while low < high and not self.is_alpha_num(s[high]):
+                high -= 1
+            if s[low].lower() != s[high].lower():
                 return False
-            l += 1
-            h -= 1
+            low += 1
+            high -= 1
         return True
 
     
