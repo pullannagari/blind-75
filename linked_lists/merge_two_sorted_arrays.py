@@ -23,5 +23,9 @@ class Solution:
         elif list2:
             curr_node.next = list2
         return dummy.next
+    
+if __name__ == "__main__":
+    for i in range(1, 5, 2):
+        print(i)
 
         
